@@ -1,14 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const date = new Date();
-let hour = date.getHours();
-let min = date.getMinutes();
-if (hour < 10) {
-	hour = `0${hour}`;
-}
-if (min < 10) {
-	min = `0${min}`;}
-console.log(hour);
+
 
 
 --- 
@@ -67,8 +59,20 @@ console.log(hour);
 		</div>
 
 		<div class="time bg-[#1d1c20] border border-[#ffffff18] rounded-2xl p-5 flex justify-center items-center">
-			<h1 class="text-7xl font-bold clock">{hour}:{min}</h1>
+			<h1 class="text-7xl font-bold clock"></h1>
 		</div>
+		<script>
+			const date = new Date();
+			let hour = date.getHours();
+			let min = date.getMinutes();
+			if (hour < 10) {
+				hour = `0${hour}`;
+			}
+			if (min < 10) {
+				min = `0${min}`;}
+			const clock = document.querySelector('.clock');
+			clock.textContent = `${hour}:${min}`;
+		</script>
 
 
 		<a  href="https://facu-flix.vercel.app/" target="_blank" class="facuflix projects h-[375px] text-white rounded-2xl border border-[#ffffff18] p-3">
