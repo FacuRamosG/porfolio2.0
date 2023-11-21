@@ -1,7 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-
 const date = new Date();
 let hour = date.getHours();
 let min = date.getMinutes();
@@ -9,9 +7,11 @@ if (hour < 10) {
 	hour = `0${hour}`;
 }
 if (min < 10) {
-	min = `0${min}`;
-}
----
+	min = `0${min}`;}
+console.log(hour);
+
+
+--- 
 
 <Layout title="Facundo Ramos Garde || Dev">
 	<main class="copp p-9">
@@ -63,12 +63,13 @@ if (min < 10) {
 		
 		
 		<div class="top-header bg-[#1d1c20] border border-[#ffffff18] rounded-2xl p-5 flex justify-center items-center">
-			<h1 class="text-7xl text-white font-bold nombre">Front-end Developer</h1>
+			<h1 class="text-7xl text-white font-bold nombre">Front-End Developer</h1>
 		</div>
 
 		<div class="time bg-[#1d1c20] border border-[#ffffff18] rounded-2xl p-5 flex justify-center items-center">
 			<h1 class="text-7xl font-bold clock">{hour}:{min}</h1>
 		</div>
+
 
 		<a  href="https://facu-flix.vercel.app/" target="_blank" class="facuflix projects h-[375px] text-white rounded-2xl border border-[#ffffff18] p-3">
 			<div class="facuclixDescription flex flex-col justify-end h-full p-2">
@@ -142,9 +143,12 @@ if (min < 10) {
 				<p class="text-[#d3d3d6] text-lg m-1">A passionate about programming, football, and sports in general. Coding is my creative language, where I solve complex problems and turn ideas into reality. Beyond the digital world, sports are my escape, where I find excitement and camaraderie.</p>
 				<p class="text-[#d3d3d6] text-lg">My restless spirit leads me to explore the world through travel, knowing new cultures and perspectives. I'm always in pursuit of continuous learning, whether it's acquiring new technological skills or delving into fascinating topics. My passion for programming, sports, travel, and learning shapes my balanced approach to life and personal growth.</p>
 		</div>
+
 		
 	</main>
+
 </Layout>
+
 
 <style>
 	.copp {
@@ -237,13 +241,13 @@ if (min < 10) {
 			opacity: 1 !important;
 	    }
 		.facuflix{
-			background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%), url('https://porfolio2-0-livid.vercel.app/projects/facuflix.png') !important;
+			background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%), url('https://porfolio2-0-livid.vercel.app/projects/facuflix.webp') !important;
 		}
 		.tesla{
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
-			background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%),  url('https://porfolio2-0-livid.vercel.app/projects/tesla.png') !important;
+			background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%),  url('https://porfolio2-0-livid.vercel.app/projects/tesla.webp') !important;
 		}
 		.split-bill{
 			display: flex;
@@ -289,12 +293,12 @@ if (min < 10) {
 
 	.facuflix{
 		grid-area: facuflix;
-		background-image: url('https://porfolio2-0-livid.vercel.app/projects/facuflix.png');
+		background-image: url('https://porfolio2-0-livid.vercel.app/projects/facuflix.webp');
 		background-size: cover;
 		background-position: center;
 	}
 	.facuflix:hover{
-		background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%), url('https://porfolio2-0-livid.vercel.app/projects/facuflix.png');
+		background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%), url('https://porfolio2-0-livid.vercel.app/projects/facuflix.webp');
 		background-size: cover;
 		background-position: center;
 	}
@@ -354,12 +358,12 @@ if (min < 10) {
 
 	.tesla{
 		grid-area: tesla;
-		background-image:url('https://porfolio2-0-livid.vercel.app/projects/tesla.png');
+		background-image:url('https://porfolio2-0-livid.vercel.app/projects/tesla.webp');
 		background-size: cover;
 		background-position: center;
 	}
 	.tesla:hover{
-		background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%),  url('https://porfolio2-0-livid.vercel.app/projects/tesla.png');
+		background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%),  url('https://porfolio2-0-livid.vercel.app/projects/tesla.webp');
 		background-size: cover;
 		background-position: center;
 	}
