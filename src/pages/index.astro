@@ -169,11 +169,164 @@ import Layout from '../layouts/Layout.astro';
 
 		width: 100%;
 		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		animation: fadeIn 1.3s;
+		-webkit-animation: fadeIn 1.3s;
+		-moz-animation: fadeIn 1.3s;
+		-o-animation: fadeIn 1.3s;
+		-ms-animation: fadeIn 1.3s;
 	}
 	.frontEnd{
 		display: none;
 	}
 	
+
+	.aside-header { 
+		grid-area: aside-header; 
+	}
+	.about-me { 
+		grid-area: about-me;
+	 }
+	.project { grid-area: project; }
+	.bot-footer { 
+		grid-area: bot-footer; 
+		background-image: url('https://porfolio2-0-livid.vercel.app/bg-top.jpg');
+		background-position: bottom right;
+		padding: 10px;
+	}
+	.top-header { grid-area: top-header; }
+	.about-me{
+		background-image: url('https://porfolio2-0-livid.vercel.app/stars.svg');
+		background-size: contain;
+	}
+
+
+	.facuflix{
+		grid-area: facuflix;
+		background-image: url('https://porfolio2-0-livid.vercel.app/projects/facuflix.webp');
+		background-size: cover;
+		background-position: center;
+	}
+	.facuflix:hover{
+		background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%), url('https://porfolio2-0-livid.vercel.app/projects/facuflix.webp');
+		background-size: cover;
+		background-position: center;
+	}
+	.facuclixDescription{
+		opacity: 0;
+		transition-duration: 1s;
+		text-wrap: wrap;
+
+	}
+	.facuflix:hover .facuclixDescription{
+		opacity: 1;
+	}
+
+
+	.split-bill{
+		grid-area: split-bill;
+		background-image:url('https://porfolio2-0-livid.vercel.app/projects/split-bill.jpg');
+		background-size: cover;
+		background-position: center;
+
+	}
+	.split-bill:hover{
+		background-image:linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%),  url('https://porfolio2-0-livid.vercel.app/projects/split-bill.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+	.split-billDescription{
+		opacity: 0;
+		transition-duration: 1s;
+		text-wrap: wrap;
+
+	}
+	.split-bill:hover .split-billDescription{
+		opacity: 1;
+	}
+
+	.mm{
+		grid-area: mm;
+		background-image:url('https://porfolio2-0-livid.vercel.app/projects/mm.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+	.mm:hover{
+		background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%),  url('https://porfolio2-0-livid.vercel.app/projects/mm.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+	.mmDescription{
+		opacity: 0;
+		transition-duration: 1s;
+		text-wrap: wrap;
+
+	}
+	.mm:hover .mmDescription{
+		opacity: 1;
+	}
+
+	.tesla{
+		grid-area: tesla;
+		background-image:url('https://porfolio2-0-livid.vercel.app/projects/tesla.webp');
+		background-size: cover;
+		background-position: center;
+
+	}
+
+	.tesla:hover{
+		background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%),  url('https://porfolio2-0-livid.vercel.app/projects/tesla.webp');
+		background-size: cover;
+		background-position: center;
+	}
+	.teslaDescription{
+		opacity: 0;
+		transition-duration: 1s;
+		text-wrap: wrap;
+
+	}
+	.tesla:hover .teslaDescription{
+		opacity: 1;
+	}
+
+	.clock{
+		background: linear-gradient(to bottom, #7949CB 0%, #1572B6 100%);
+
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+	}
+
+	.nombre{
+		background: linear-gradient(to right, #D98ACE 0%, #ad69bb 25%, rgb(145, 90, 175) 100%);
+
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+	}
+
+	@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+	}
+
+	@-moz-keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+	}
+
+	@-webkit-keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+	}
+
+	@-o-keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+	}
+
+	@-ms-keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+	}
+
 	@media (max-width: 1180px) {
 		.copp{
 			grid-template-columns: 1fr 1fr 1fr 1fr; 
@@ -278,121 +431,6 @@ import Layout from '../layouts/Layout.astro';
 		}
 	}
 	
-	.aside-header { grid-area: aside-header; }
-	.about-me { grid-area: about-me; }
-	.project { grid-area: project; }
-	.bot-footer { 
-		grid-area: bot-footer; 
-		background-image: url('https://porfolio2-0-livid.vercel.app/bg-top.jpg');
-		background-position: bottom right;
-		padding: 10px;
-	}
-	.top-header { grid-area: top-header; }
-	.about-me{
-		background-image: url('https://porfolio2-0-livid.vercel.app/stars.svg');
-		background-size: contain;
-	}
-
-
-	.facuflix{
-		grid-area: facuflix;
-		background-image: url('https://porfolio2-0-livid.vercel.app/projects/facuflix.webp');
-		background-size: cover;
-		background-position: center;
-	}
-	.facuflix:hover{
-		background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%), url('https://porfolio2-0-livid.vercel.app/projects/facuflix.webp');
-		background-size: cover;
-		background-position: center;
-	}
-	.facuclixDescription{
-		opacity: 0;
-		transition-duration: 1s;
-		text-wrap: wrap;
-
-	}
-	.facuflix:hover .facuclixDescription{
-		opacity: 1;
-	}
-
-
-	.split-bill{
-		grid-area: split-bill;
-		background-image:url('https://porfolio2-0-livid.vercel.app/projects/split-bill.jpg');
-		background-size: cover;
-		background-position: center;
-
-	}
-	.split-bill:hover{
-		background-image:linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%),  url('https://porfolio2-0-livid.vercel.app/projects/split-bill.jpg');
-		background-size: cover;
-		background-position: center;
-	}
-	.split-billDescription{
-		opacity: 0;
-		transition-duration: 1s;
-		text-wrap: wrap;
-
-	}
-	.split-bill:hover .split-billDescription{
-		opacity: 1;
-	}
-
-	.mm{
-		grid-area: mm;
-		background-image:url('https://porfolio2-0-livid.vercel.app/projects/mm.jpg');
-		background-size: cover;
-		background-position: center;
-	}
-	.mm:hover{
-		background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%),  url('https://porfolio2-0-livid.vercel.app/projects/mm.jpg');
-		background-size: cover;
-		background-position: center;
-	}
-	.mmDescription{
-		opacity: 0;
-		transition-duration: 1s;
-		text-wrap: wrap;
-
-	}
-	.mm:hover .mmDescription{
-		opacity: 1;
-	}
-
-	.tesla{
-		grid-area: tesla;
-		background-image:url('https://porfolio2-0-livid.vercel.app/projects/tesla.webp');
-		background-size: cover;
-		background-position: center;
-	}
-	.tesla:hover{
-		background-image:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%),  url('https://porfolio2-0-livid.vercel.app/projects/tesla.webp');
-		background-size: cover;
-		background-position: center;
-	}
-	.teslaDescription{
-		opacity: 0;
-		transition-duration: 1s;
-		text-wrap: wrap;
-
-	}
-	.tesla:hover .teslaDescription{
-		opacity: 1;
-	}
-
-	.clock{
-		background: linear-gradient(to bottom, #7949CB 0%, #1572B6 100%);
-
-		-webkit-text-fill-color: transparent;
-		-webkit-background-clip: text;
-	}
-
-	.nombre{
-		background: linear-gradient(to right, #D98ACE 0%, #ad69bb 25%, rgb(145, 90, 175) 100%);
-
-		-webkit-text-fill-color: transparent;
-		-webkit-background-clip: text;
-	}
 
 
 </style>
