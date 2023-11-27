@@ -143,14 +143,14 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</div>
 
-		<div class="about-me  bg-[#1d1c20] border border-[#ffffff18] rounded-2xl p-5">
+		<div class="about-me  bg-[#1d1c20] border border-[#ffffff18] rounded-2xl p-7">
 				<h1 class="text-4xl text-[#7949cb]">About me</h1>
 				<p class="text-[#d3d3d6] text-lg m-1">Passionate about programming, football, and sports in general. Coding is my creative language, where I solve complex problems and turn ideas into reality. </p>
 				<p class="text-[#d3d3d6] text-lg">My restless spirit leads me to explore the world through travel, learning new cultures and perspectives. Whether it's acquiring new technological skills or delving into fascinating topics, my life and personal growth are profoundly influenced by the fervor with my passions.</p>
 		</div>
 
-		<div class=" h-[200px] bg-[#1d1c20] border border-[#ffffff18] rounded-2xl p-5 flex justify-center items-center">
-			<img src="https://i.giphy.com/media/HzPtbOKyBoBFsK4hyc/giphy.webp" alt="" class="h-[150px]">
+		<div class="gifBottom  bg-[#1d1c20] border border-[#ffffff18] rounded-2xl p-7 flex justify-center items-center ">
+			<img src="https://i.giphy.com/media/HzPtbOKyBoBFsK4hyc/giphy.webp" alt="" class="h-[175px]">
 		</div>
 
 
@@ -170,8 +170,8 @@ import Layout from '../layouts/Layout.astro';
 			"aside-header top-header top-header top-header time"
 			"aside-header facuflix tesla split-bill mm"
 			"aside-header facuflix tesla split-bill mm"
-			"bot-footer bot-footer about-me about-me ."
-			"bot-footer bot-footer about-me about-me ."; 
+			"bot-footer bot-footer about-me about-me gifBottom"
+			"bot-footer bot-footer about-me about-me gifBottom"; 
 
 		width: 100%;
 		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -184,7 +184,9 @@ import Layout from '../layouts/Layout.astro';
 	.frontEnd{
 		display: none;
 	}
-	
+	.gifBottom{
+		grid-area: gifBottom;
+	}
 
 	.aside-header { 
 		grid-area: aside-header; 
@@ -348,6 +350,9 @@ import Layout from '../layouts/Layout.astro';
 		.time{
 			display: none;
 		}	
+		.gifBottom{
+			display: none;
+		}
 		.tesla{
 			display: none;
 		}
